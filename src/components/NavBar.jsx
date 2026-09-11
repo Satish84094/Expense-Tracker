@@ -5,7 +5,7 @@ function NavBar() {
         <div className="font-bold text-xl text-green-500">Budget Tracker</div>
         <div className="bg-zinc-700 p-1 px-2 rounded-lg hover:bg-stone-600 text-white cursor-pointer transition-all">
           <a
-            href="https://github.com/913Shivam/Expense-Tracker"
+            href="https://github.com/Satish84094/Expense-Tracker"
             target="_blank"
           >
             Github
