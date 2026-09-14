@@ -39,7 +39,8 @@ function Chart({ piedata }) {
 
   return (
     <>
-      <div style={{ width: "400px", margin: "10px auto" }}>
+      <div className="relative mx-auto my-2 aspect-square w-full max-w-md"
+        style={{ margin: "10px auto" }}>
         <Pie data={data} options={options} />
       </div>
     </>
