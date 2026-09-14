@@ -3,25 +3,26 @@ import BigButton from "./BigButton";
 import { useState } from "react";
 
 function ChartCard({ expensepiedata, incomepiedata }) {
-  let type = ["Expenses", "Income"];
-  let expenseColor = [
-    "orange",
-    "rgba(0,0,0,0.1)",
-    "white",
-    "rgba(0, 0, 0, 0.6)",
-  ];
-  let [status, setStatus] = useState("Expenses Chart");
-  let incomeColor = ["rgba(0,0,0,0.1)", "blue", "rgba(0, 0, 0, 0.6)", "white"];
-  const handleToChangeStatus = (e) => {
-    if (status != e.target.textContent) {
-      setStatus(e.target.textContent);
-    }
-  };
+  // let type = ["Expenses", "Income"];
+  // let expenseColor = [
+  //   "orange",
+  //   "rgba(0,0,0,0.1)",
+  //   "white",
+  //   "rgba(0, 0, 0, 0.6)",
+  // ];
+  // let [status, setStatus] = useState("Expenses Chart");
+  // let incomeColor = ["rgba(0,0,0,0.1)", "blue", "rgba(0, 0, 0, 0.6)", "white"];
+  // const handleToChangeStatus = (e) => {
+  //   if (status != e.target.textContent) {
+  //     setStatus(e.target.textContent);
+  //   }
+  // };
   return (
     <>
       <div className="w-[75%] max-w-212 m-auto mt-10 border rounded-xl border-zinc-300 p-5">
         <div className="flex gap-4">
-          {status === "Expenses Chart"
+          Track Expenses by Pie chart
+          {/* {status === "Expenses Chart"
             ? type.map((item, index) => {
                 return (
                   <BigButton
@@ -41,10 +42,10 @@ function ChartCard({ expensepiedata, incomepiedata }) {
                     handleToChangeStatus={handleToChangeStatus}
                   ></BigButton>
                 );
-              })}
+              })} */}
         </div>
         <div className="mt-3">
-          {status === "Expenses Chart" ? (
+          {/* {status === "Expenses Chart" ? (
             expensepiedata.length ? (
               <Chart piedata={expensepiedata}></Chart>
             ) : (
@@ -54,6 +55,12 @@ function ChartCard({ expensepiedata, incomepiedata }) {
             <Chart piedata={incomepiedata}></Chart>
           ) : (
             "No income to chart yet"
+          )} */}
+
+          {expensepiedata.length ? (
+            <Chart piedata={expensepiedata}></Chart>
+          ) : (
+            "No Expenses to chart yet"
           )}
         </div>
       </div>
