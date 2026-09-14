@@ -20,9 +20,7 @@ function ChartCard({ expensepiedata, incomepiedata }) {
   return (
     <>
       <div className="w-[75%] max-w-212 m-auto mt-10 border rounded-xl border-zinc-300 p-5">
-        <div className="flex gap-4">
-          Track Expenses by Pie chart
-          {/* {status === "Expenses Chart"
+        {/* {status === "Expenses Chart"
             ? type.map((item, index) => {
                 return (
                   <BigButton
@@ -43,7 +41,7 @@ function ChartCard({ expensepiedata, incomepiedata }) {
                   ></BigButton>
                 );
               })} */}
-        </div>
+
         <div className="mt-3">
           {/* {status === "Expenses Chart" ? (
             expensepiedata.length ? (
@@ -58,7 +56,10 @@ function ChartCard({ expensepiedata, incomepiedata }) {
           )} */}
 
           {expensepiedata.length ? (
-            <Chart piedata={expensepiedata}></Chart>
+            <div>
+              <div className="flex gap-4">Track Expenses by Pie chart </div>
+              <Chart piedata={expensepiedata}></Chart>
+            </div>
           ) : (
             "No Expenses to chart yet"
           )}
